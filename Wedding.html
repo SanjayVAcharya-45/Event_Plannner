@@ -3,34 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amore Events - Wedding Party</title>
+  <title>Wedding Party</title>
   <link rel="stylesheet" href="wedding.css">
 </head>
 <body>
 
-  <!-- Banner Section -->
-  <header class="banner-section">
-    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80" alt="Wedding Banner" class="banner-img">
-    <div class="banner-text">
-      <h1>Wedding Party Halls</h1>
+  <!-- Images Section -->
+  <section class="images-section">
+    <h1>Wedding Party</h1>
+    <div class="image-container">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80" alt="Wedding Hall Image">
     </div>
-  </header>
+  </section>
 
-  <!-- Booking Section -->
-  <main class="booking-container">
-    <form class="booking-form">
-      <label for="wedding-halls" class="form-label">Select Wedding Party Hall:</label>
-      
-      <select id="wedding-halls" name="wedding-halls" class="dropdown-select" required>
-        <option value="" disabled selected>Choose a Hall</option>
-        <option value="hall1">1. Grand Royal Ballroom</option>
-        <option value="hall2">2. Sunset Beach Garden</option>
-        <option value="hall3">3. Imperial Banquet Hall</option>
+  <!-- Wedding Party Halls Dropdown & Booking Section -->
+  <section class="booking-section">
+    <form action="#" method="POST">
+      <label for="wedding-halls">Wedding party halls:</label>
+      <select id="wedding-halls" name="wedding_hall" required>
+        <option value="" disabled selected>Select Hall</option>
+        <option value="1">1. Royal Imperial Palace</option>
+        <option value="2">2. Sunset Beach Resort</option>
+        <option value="3">3. Crystal Glass Pavilion</option>
       </select>
 
-      <button type="submit" class="book-now-btn">Book Now</button>
+      <button type="submit" class="book-btn">Book Now</button>
     </form>
-  </main>
+  </section>
 
 </body>
 </html>
