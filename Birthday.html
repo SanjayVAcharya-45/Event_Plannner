@@ -3,91 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roshni Events</title>
+  <title>Birthday Party</title>
   <link rel="stylesheet" href="birthday.css">
 </head>
-<body id="top">
+<body>
 
-  <!-- Nav Bar -->
-  <nav class="navbar">
-    <div class="nav-links-left">
-      <a href="index.html">HOME</a>
-      <a href="#venues">VENUES</a>
-      <a href="#about">ABOUT US</a>
-      <a href="#contact">CONTACT</a>
-    </div>
-    <div class="logo"><a href="#top">ROSHNI EVENTS</a></div>
-    <div class="nav-right">
-      <a href="#login" class="login-link">Log In</a>
-      <a href="#booking" class="nav-cta-btn">BOOK HALL</a>
-    </div>
-  </nav>
-
-  <!-- Banner -->
-  <header class="hero-banner">
-    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1600&q=80" alt="Banner" class="hero-img">
-    <div class="banner-overlay">
-      <h1>Unforgettable Birthday Soirées</h1>
-      <p>Crafting Extraordinary Moments & Luxurious Party Experiences</p>
-    </div>
-  </header>
-
-  <!-- Venues -->
-  <section id="venues" class="services-section">
-    <h2>Our Premier Birthday Venues</h2>
-    <div class="venue-grid">
-      <div class="venue-card">
-        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="Venue 1" class="venue-img">
-        <h3>1. The Royal Velvet Ballroom</h3>
-        <p>Opulent indoor space with chandeliers and stage setups.</p>
-      </div>
-      <div class="venue-card">
-        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Venue 2" class="venue-img">
-        <h3>2. The Starlight Pavilion</h3>
-        <p>Modern lounge arena with music stage and dance floor.</p>
-      </div>
-      <div class="venue-card">
-        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80" alt="Venue 3" class="venue-img">
-        <h3>3. Elysian Crystal Oasis</h3>
-        <p>Enchanting botanical garden setting for evening parties.</p>
-      </div>
+  <!-- Images Section -->
+  <section class="images-section">
+    <h1>Birthday Party</h1>
+    <div class="image-container">
+      <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1000&q=80" alt="Birthday Hall Image">
     </div>
   </section>
 
-  <!-- Themes -->
-  <section id="portfolio" class="portfolio-section">
-    <h2>Signature Party Themes</h2>
-    <div class="portfolio-grid">
-      <img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?auto=format&fit=crop&w=600&q=80" alt="Theme 1" class="portfolio-img">
-      <img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80" alt="Theme 2" class="portfolio-img">
-      <img src="https://images.unsplash.com/photo-1531956531700-dc032732c234?auto=format&fit=crop&w=600&q=80" alt="Theme 3" class="portfolio-img">
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="about-section">
-    <h2>About Roshni Events</h2>
-    <p>We specialize in luxury birthday celebrations, venue bookings, and custom decor.</p>
-  </section>
-
-  <!-- Booking -->
-  <section id="booking" class="booking-section">
-    <h2>Reserve Your Venue</h2>
-    <form class="booking-form">
-      <select id="hall-select" class="dropdown" required>
-        <option value="" disabled selected>Choose a Birthday Hall</option>
-        <option value="hall1">1. The Royal Velvet Ballroom</option>
-        <option value="hall2">2. The Starlight Pavilion</option>
-        <option value="hall3">3. Elysian Crystal Oasis</option>
+  <!-- Birthday Party Halls Dropdown & Booking Section -->
+  <section class="booking-section">
+    <form action="#" method="POST">
+      <label for="birthday-halls">Birthday party halls:</label>
+      <select id="birthday-halls" name="birthday_hall" required>
+        <option value="" disabled selected>Select Hall</option>
+        <option value="1">1. Grand Velvet Ballroom</option>
+        <option value="2">2. Starlight Party Arena</option>
+        <option value="3">3. Gardenia Open-Air Lawn</option>
       </select>
-      <button type="submit" class="book-now-btn">Confirm Reservation</button>
+
+      <button type="submit" class="book-btn">Book Now</button>
     </form>
   </section>
-
-  <!-- Footer -->
-  <footer id="contact" class="footer">
-    <p>&copy; 2026 Roshni Events. All rights reserved.</p>
-  </footer>
 
 </body>
 </html>
