@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-html,body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -12,33 +13,57 @@ html,body {
 body {
     min-height: 100vh;
     font-family: Arial, sans-serif;
+
+    /* Desktop: no scrolling */
     overflow: hidden;
 
-    /* Blurred background image */
+    /* Background */
     background:
-        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
         url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=80");
 
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 
-/* MAIN PAGE */
+/* =====================================
+   MAIN PAGE
+===================================== */
 
-#wedpage {
-    width: 100%;
+body {
+    display: flex;
+}
+
+
+/* =====================================
+   LEFT IMAGE SECTION
+===================================== */
+
+.images-section {
+    width: 55%;
     height: 100vh;
 
+    padding: 100px 30px 30px;
+
     display: flex;
+    align-items: center;
+    justify-content: center;
+
     position: relative;
 }
 
 
-/* HEADING */
+/* =====================================
+   HEADING
+===================================== */
 
 .images-section h1 {
-    position: fixed;
+    position: absolute;
 
     top: 25px;
     left: 50%;
@@ -58,22 +83,13 @@ body {
 }
 
 
-/* LEFT IMAGE */
-
-.images-section {
-    width: 55%;
-    height: 100vh;
-
-    padding: 100px 30px 30px 30px;
-
-    display: flex;
-    align-items: center;
-}
-
+/* =====================================
+   IMAGE
+===================================== */
 
 .image-container {
     width: 100%;
-    height: 80vh;
+    height: 78vh;
 
     overflow: hidden;
 
@@ -81,7 +97,6 @@ body {
 
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
-
 
 .image-container img {
     width: 100%;
@@ -93,32 +108,37 @@ body {
 }
 
 
-/* RIGHT BOOKING AREA */
+/* =====================================
+   RIGHT BOOKING SECTION
+===================================== */
 
 .booking-section {
     width: 45%;
     height: 100vh;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    padding: 80px 60px 40px 30px;
+    padding: 80px 50px 40px 20px;
 }
 
 
-/* BOOKING CARD */
+/* =====================================
+   BOOKING FORM
+===================================== */
 
 .booking-section form {
     width: 100%;
-    max-width: 600px;
+    max-width: 480px;
 
-    padding: 65px;
+    padding: 40px;
 
     display: flex;
     flex-direction: column;
 
-    gap: 30px;
+    gap: 20px;
 
     background: rgba(255, 255, 255, 0.18);
 
@@ -132,40 +152,49 @@ body {
 }
 
 
-/* LABEL */
+/* =====================================
+   LABEL
+===================================== */
 
 .booking-section label {
     color: white;
 
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
 }
 
 
-/* DROPDOWN */
+/* =====================================
+   DROPDOWN
+===================================== */
 
 .booking-section select {
     width: 100%;
-    height: 70px;
+    height: 60px;
 
-    padding: 15px 20px;
+    padding: 10px 15px;
 
     border: none;
     border-radius: 12px;
 
-    font-size: 20px;
+    font-size: 18px;
 
     outline: none;
 
     cursor: pointer;
+
+    background: white;
+    color: #333;
 }
 
 
-/* BOOK BUTTON */
+/* =====================================
+   BOOK BUTTON
+===================================== */
 
 .book-btn {
     width: 100%;
-    height: 70px;
+    height: 60px;
 
     border: none;
     border-radius: 12px;
@@ -174,14 +203,13 @@ body {
 
     color: white;
 
-    font-size: 23px;
+    font-size: 20px;
     font-weight: bold;
 
     cursor: pointer;
 
     transition: 0.3s;
 }
-
 
 .book-btn:hover {
     background: #a91450;
@@ -192,18 +220,51 @@ body {
 }
 
 
-/* TABLET */
+/* =====================================
+   LAPTOP / DESKTOP
+   NO SCROLL
+===================================== */
+
+@media (min-width: 1025px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    .images-section {
+        width: 55%;
+        height: 100vh;
+    }
+
+    .booking-section {
+        width: 45%;
+        height: 100vh;
+    }
+}
+
+
+/* =====================================
+   TABLET
+   SCROLL ENABLED
+===================================== */
 
 @media (max-width: 1024px) {
 
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
     .images-section {
         width: 52%;
+
         padding: 100px 20px 20px;
     }
 
     .booking-section {
         width: 48%;
-        padding: 100px 25px 30px 10px;
+
+        padding: 80px 25px 30px 10px;
     }
 
     .images-section h1 {
@@ -211,7 +272,9 @@ body {
     }
 
     .booking-section form {
-        padding: 45px 35px;
+        padding: 35px 30px;
+
+        gap: 18px;
     }
 
     .booking-section label {
@@ -220,61 +283,73 @@ body {
 
     .booking-section select {
         height: 60px;
+
         font-size: 18px;
     }
 
     .book-btn {
         height: 60px;
+
         font-size: 20px;
     }
 }
 
 
-/* MOBILE */
+/* =====================================
+   MOBILE
+   SCROLL ENABLED
+===================================== */
 
 @media (max-width: 768px) {
 
     body {
+        display: block;
+
+        overflow-x: hidden;
         overflow-y: auto;
-    }
-
-    #wedpage {
-        width: 100%;
-        min-height: 100vh;
-        height: auto;
-        flex-direction: column;
-    }
-
-    .images-section h1 {
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 38px;
-        white-space: nowrap;
     }
 
     .images-section {
         width: 100%;
         height: 55vh;
+
         padding: 90px 20px 20px;
+    }
+
+    .images-section h1 {
+        position: absolute;
+
+        top: 20px;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        font-size: 38px;
     }
 
     .image-container {
         width: 100%;
         height: 100%;
+
         border-radius: 20px;
     }
 
     .booking-section {
         width: 100%;
         height: auto;
+
         padding: 30px 20px 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .booking-section form {
         width: 100%;
+
         padding: 40px 25px;
+
         gap: 22px;
     }
 
@@ -284,19 +359,29 @@ body {
 
     .booking-section select {
         height: 58px;
+
         font-size: 17px;
     }
 
     .book-btn {
         height: 58px;
+
         font-size: 19px;
     }
 }
 
 
-/* SMALL MOBILE */
+/* =====================================
+   SMALL MOBILE
+   SCROLL ENABLED
+===================================== */
 
 @media (max-width: 480px) {
+
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
 
     .images-section h1 {
         font-size: 30px;
@@ -304,6 +389,7 @@ body {
 
     .images-section {
         height: 50vh;
+
         padding: 80px 15px 15px;
     }
 
@@ -325,11 +411,13 @@ body {
 
     .booking-section select {
         height: 55px;
+
         font-size: 16px;
     }
 
     .book-btn {
         height: 55px;
+
         font-size: 18px;
     }
 }
